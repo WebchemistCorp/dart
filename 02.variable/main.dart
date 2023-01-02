@@ -21,4 +21,21 @@ void main() {
     null_safety_value.isNotEmpty;
   }
   null_safety_value?.isNotEmpty;
+
+  /** final */
+  // 변수를 1번 선언 후 변경하지 못하게 할 때 사용합니다.
+  // javascript, typescript의 const와 같다.
+  final final_value = "test";
+  print(final_value);
+  // final_value = 'any'; // Error
+
+  /** late */
+  // 변수에 값이 들어가기전에 사용하지 못하게 합니다. (class로 작업할 때 더 의미가 있습니다.)
+  late final String late_string_value;
+  late_string_value = "test";
+  // late_string_value = "any"; // Error
+
+  /** const */
+  // 컴파일시에 미리 알게 되는 값 입니다. (compile-time constant)
+  const const_name = "Genn";
 }
